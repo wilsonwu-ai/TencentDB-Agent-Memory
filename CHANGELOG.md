@@ -4,6 +4,22 @@
 
 ---
 
+## [0.3.5] - 2026-05-15
+
+### 🐛 修复
+
+- **兼容 OpenClaw v2026.5.7 zod v4 子路径**：显式声明 `zod@^4.4.3` 依赖，解决 `@ai-sdk/provider-utils@4.x` 需要 `zod/v4` 子路径导出但宿主环境可能 hoist zod@3.x 引发 `Cannot find module zod/v4` 的运行时错误。
+
+### ✨ 改进
+
+- **L1→L2 延迟从 90s 降至 10s**：`l2DelayAfterL1Seconds` 默认值 90→10，冷启动用户不再需要等待 ~90s 才能看到 L2 场景提取结果，体感更及时。
+
+### 📖 文档
+
+- README 新增 Docker Quick Start 章节，说明模型 URL/Name 环境变量配置方式。
+
+---
+
 ## [0.3.4] - 2026-05-12
 
 ### 🐛 修复
